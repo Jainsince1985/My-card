@@ -1,160 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Visiting Card | JAIN FOOD PRODUCTS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background-color: #ffffff;
-            width: 350px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-            text-align: center;
-            padding-bottom: 20px;
-        }
-        .header {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            height: 120px;
-        }
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 4px solid #ffffff;
-            margin-top: -50px;
-            background-color: #ffffff; /* Changed to white for logos */
-            object-fit: contain; /* Ensures your whole logo fits inside the circle */
-        }
-        .content {
-            padding: 10px 20px;
-        }
-        .content h1 {
-            margin: 10px 0 2px;
-            font-size: 24px;
-            color: #333;
-        }
-        .content h3 {
-            margin: 0;
-            font-size: 16px;
-            color: #d35400;
-        }
-        .content p {
-            margin: 5px 0 15px;
-            color: #777;
-            font-size: 14px;
-        }
-        .contact-info {
-            text-align: left;
-            margin-top: 15px;
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 10px;
-        }
-        .contact-info div {
-            margin-bottom: 10px;
-            font-size: 14px;
-            color: #555;
-            display: flex;
-            align-items: center;
-        }
-        .contact-info i {
-            width: 20px;
-            color: #ff7e5f;
-            margin-right: 10px;
-        }
-        .contact-info a {
-            color: #555;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            color: #ff7e5f;
-        }
-        .social-links {
-            margin-top: 15px;
-        }
-        .social-links a {
-            color: #555;
-            font-size: 20px;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #ff7e5f;
-        }
-        .qr-code {
-            margin-top: 15px;
-        }
-        .qr-code img {
-            width: 80px;
-            height: 80px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 4px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: opacity 0.3s;
-        }
-        .btn:hover {
-            opacity: 0.9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Visiting Card | JAIN FOOD PRODUCTS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* CSS Styles for Layout, Colors, and Alignment */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f3ef; /* Light beige for background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .card {
+      width: 380px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Professional Brown-Orange Header */
+    .header {
+      height: 140px;
+      background: linear-gradient(135deg, #a36136, #7d4e2a); /* Richer brown-orange color */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 20px;
+    }
+
+    /* Logo - Well-aligned in the center */
+    .logo {
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      top: 50px; /* Vertically centered relative to header */
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .content {
+      padding: 60px 30px 20px; /* Space for the overlapping logo */
+      text-align: center;
+    }
+
+    h1.name {
+      margin: 0;
+      font-size: 26px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    p.firm-name {
+      margin: 2px 0 15px;
+      font-size: 16px;
+      color: #a36136;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    p.manufacturer {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Contact Details Section */
+    .contact-details {
+      margin-top: 30px;
+      background-color: #f5f5f0; /* Soft grey background for contact section */
+      padding: 20px;
+      border-radius: 15px;
+      text-align: left;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    /* Phone number icons in warm color */
+    .contact-list i {
+      color: #cc6600; /* Warm orange color for contact icons */
+      margin-right: 12px;
+      width: 20px;
+    }
+
+    .contact-list strong {
+      margin-right: 5px;
+    }
+
+    /* Phone Numbers - One Line */
+    .phone-numbers {
+      display: flex;
+      gap: 15px; /* Spacing between the numbers */
+    }
+
+    /* Social Icons Section (Colorful) */
+    .social-icons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    /* Facebook Brand Color: Blue */
+    .fa-facebook { color: #1877f2; }
+    /* Instagram Brand Color: Pinkish-red */
+    .fa-instagram { color: #c32aa3; }
+    /* WhatsApp Brand Color: Green */
+    .fa-whatsapp { color: #25d366; }
+
+    .social-icons a:hover {
+      opacity: 0.8;
+    }
+
+    /* QR Code Section - Well framed */
+    .qr-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .qr-code {
+      width: 140px;
+      height: 140px;
+      border: 4px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="header"></div>
-        
-        <img src="JAINLOGO.jpg" alt="JAIN FOOD PRODUCTS Logo" class="profile-img">
-        
-        <div class="content">
-            <h1>Puneet Jain</h1>
-            <h3>JAIN FOOD PRODUCTS</h3>
-            <p>Jain since 1985 | Namkeen Manufacturer</p>
-
-            <div class="contact-info">
-                <div><i class="fas fa-phone"></i> <span><a href="tel:+919927586045">+91 99275 86045</a></span></div>
-                
-                <div><i class="fas fa-phone-alt"></i> <span><a href="tel:+919837409008">+91 98374 09008</a></span></div>
-                
-                <div><i class="fas fa-globe"></i> <span><a href="https://www.jainfoods.in" target="_blank">www.jainfoods.in</a></span></div>
-                <div><i class="fas fa-envelope"></i> <span>info@jainfoods.in</span></div>
-                <div><i class="fas fa-map-marker-alt"></i> <span>Meerut, UP</span></div>
-            </div>
-
-            <div class="social-links">
-                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/919927586045" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-
-            <div class="qr-code">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.jainfoods.in" alt="QR Code">
-            </div>
-
-            <a href="tel:+919927586045" class="btn">Call Now</a>
-        </div>
+  <div class="card">
+    <div class="header">
+      <img class="logo" src="logo.jpg" alt="Jain since 1985 | JAIN FOOD PRODUCTS Logo">
     </div>
+
+    <div class="content">
+      <h1 class="name">Puneet Jain</h1>
+      <p class="firm-name">JAIN FOOD PRODUCTS</p>
+      <p class="manufacturer">Jain since 1985 | Namkeen Manufacturer</p>
+
+      <div class="contact-details">
+        <ul class="contact-list">
+          <li>
+            <i class="fas fa-phone"></i>
+            <strong>Mobiles:</strong>
+            <div class="phone-numbers">
+              <span>+91 99275 86045</span>
+              <span>+91 98374 09008</span>
+            </div>
+          </li>
+          <li><i class="fas fa-globe"></i> <strong>Website:</strong> www.jainfoods.in</li>
+          <li><i class="fas fa-envelope"></i> <strong>Email:</strong> info@jainfoods.in</li>
+          <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Meerut, UP</li>
+        </ul>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/187PQNGHir/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jainnamkeenofficial?igsh=YTQ3MjhzYWx1cm0w" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919927586045" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <div class="qr-container">
+        <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://www.jainfoods.in" alt="QR Code to www.jainfoods.in">
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

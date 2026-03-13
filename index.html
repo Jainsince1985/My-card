@@ -6,21 +6,20 @@
   <title>E-Visiting Card | JAIN FOOD PRODUCTS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    /* CSS Styles for Layout, Colors, and Alignment */
     body {
       margin: 0;
       padding: 0;
-      background-color: #f7f3ef; /* Light beige for background */
+      background-color: #f7f3ef; /* Outer beige background */
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Poppins', 'Open Sans', sans-serif; /* Modern font combination */
     }
 
     .card {
       width: 380px;
-      background-color: #fff;
+      background-color: #fff; /* Main card background is now clean white */
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       overflow: hidden;
@@ -29,44 +28,44 @@
       position: relative;
     }
 
-    /* Professional Brown-Orange Header */
     .header {
-      height: 140px;
-      background: linear-gradient(135deg, #a36136, #7d4e2a); /* Richer brown-orange color */
+      height: 160px; /* Increased header height slightly */
+      background: linear-gradient(135deg, #a36136, #7d4e2a); /* Your brown-orange header */
       display: flex;
       justify-content: center;
-      align-items: flex-end;
-      padding-bottom: 20px;
+      align-items: center; /* Vertically centers the logo *inside* the header */
+      position: relative;
     }
 
-    /* Logo - Well-aligned in the center */
+    /* Logo is now contained *within* the header for perfect fitting */
     .logo {
-      width: 130px;
-      height: 130px;
-      position: absolute;
-      top: 50px; /* Vertically centered relative to header */
-      left: 50%;
-      transform: translateX(-50%);
+      width: 140px;
+      height: 140px;
       border: 6px solid #fff;
       border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Soft shadow on the logo circle */
+      background-color: #fff; /* White background within logo circle */
+      object-fit: contain;
+      padding: 15px; /* Added internal padding to keep logo graphic centered */
+      box-sizing: border-box;
     }
 
     .content {
-      padding: 60px 30px 20px; /* Space for the overlapping logo */
+      padding: 30px; /* Standard internal padding */
       text-align: center;
     }
 
     h1.name {
-      margin: 0;
-      font-size: 26px;
+      margin: 10px 0 2px;
+      font-size: 28px;
       color: #333;
       font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow for pop */
     }
 
     p.firm-name {
       margin: 2px 0 15px;
-      font-size: 16px;
+      font-size: 18px;
       color: #a36136;
       font-weight: 600;
       text-transform: uppercase;
@@ -76,15 +75,16 @@
       margin: 0;
       font-size: 14px;
       color: #666;
+      letter-spacing: 0.5px;
     }
 
-    /* Contact Details Section */
     .contact-details {
       margin-top: 30px;
-      background-color: #f5f5f0; /* Soft grey background for contact section */
-      padding: 20px;
+      background-color: #fcfaf7; /* Very faint internal beige background for section */
+      padding: 25px;
       border-radius: 15px;
       text-align: left;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.03); /* Faint inset shadow */
     }
 
     .contact-list {
@@ -95,66 +95,79 @@
 
     .contact-list li {
       display: flex;
-      align-items: center;
-      margin-bottom: 12px;
+      align-items: flex-start; /* Icon aligns with the first line of text */
+      margin-bottom: 15px;
       color: #333;
-      font-size: 14px;
+      font-size: 15px;
     }
 
-    /* Phone number icons in warm color */
     .contact-list i {
-      color: #cc6600; /* Warm orange color for contact icons */
-      margin-right: 12px;
-      width: 20px;
+      color: #a36136; /* Using firm name color for icons to unify the theme */
+      margin-right: 15px;
+      width: 25px;
+      font-size: 18px;
+      margin-top: 3px;
     }
 
     .contact-list strong {
-      margin-right: 5px;
+      margin-right: 10px;
+      font-weight: 600;
     }
 
-    /* Phone Numbers - One Line */
     .phone-numbers {
       display: flex;
-      gap: 15px; /* Spacing between the numbers */
+      flex-direction: column;
+      gap: 6px;
     }
 
-    /* Social Icons Section (Colorful) */
+    .phone-numbers a, .website-link, .email-link {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .phone-numbers a:hover, .website-link:hover, .email-link:hover {
+      color: #a36136; /* Highlight color on hover */
+    }
+
     .social-icons {
-      margin-top: 25px;
+      margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
 
     .social-icons a {
       text-decoration: none;
-      font-size: 24px;
-      transition: color 0.3s;
+      font-size: 26px;
+      transition: all 0.3s; /* Smooth transitions */
     }
 
-    /* Facebook Brand Color: Blue */
-    .fa-facebook { color: #1877f2; }
-    /* Instagram Brand Color: Pinkish-red */
-    .fa-instagram { color: #c32aa3; }
-    /* WhatsApp Brand Color: Green */
-    .fa-whatsapp { color: #25d366; }
+    /* Standard social brand colors are applied automatically on hover/active */
+    .fa-facebook { color: #555; }
+    .fa-facebook:hover { color: #1877f2; }
+    
+    .fa-instagram { color: #555; }
+    .fa-instagram:hover { color: #c32aa3; }
+    
+    .fa-whatsapp { color: #555; }
+    .fa-whatsapp:hover { color: #25d366; }
 
     .social-icons a:hover {
-      opacity: 0.8;
+      opacity: 0.9;
+      transform: scale(1.1); /* Subtle grow effect on hover */
     }
 
-    /* QR Code Section - Well framed */
     .qr-container {
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: center;
     }
 
     .qr-code {
-      width: 140px;
-      height: 140px;
-      border: 4px solid #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 150px;
+      height: 150px;
+      border: 5px solid #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* More prominent QR shadow */
     }
   </style>
 </head>
@@ -162,7 +175,7 @@
 
   <div class="card">
     <div class="header">
-    <img class="logo" src="JAINLOGO.jpg" style="background-color: #fff; object-fit: contain; padding: 12px; box-sizing: border-box;" alt="JAIN FOOD PRODUCTS">
+      <img class="logo" src="JAINLOGO.jpg" alt="Jain since 1985 | JAIN FOOD PRODUCTS Logo">
     </div>
 
     <div class="content">
@@ -172,17 +185,32 @@
 
       <div class="contact-details">
         <ul class="contact-list">
-         <li style="align-items: flex-start;">
-            <i class="fas fa-phone" style="margin-top: 5px; color: #cc6600; margin-right: 12px;"></i>
-            <strong style="margin-right: 10px;">Mobiles:</strong>
-            <div style="display: block;">
-              <a href="tel:+919927586045" style="color: #333; text-decoration: none; display: block; margin-bottom: 6px;">+91 99275 86045</a>
-              <a href="tel:+919837409008" style="color: #333; text-decoration: none; display: block;">+91 98374 09008</a>
+          
+          <li>
+            <i class="fas fa-phone"></i>
+            <strong>Mobiles:</strong>
+            <div class="phone-numbers">
+              <a href="tel:+919927586045">+91 99275 86045</a>
+              <a href="tel:+919837409008">+91 98374 09008</a>
             </div>
           </li>
-          <li><i class="fas fa-globe"></i> <strong>Website:</strong> www.jainfoods.in</li>
-          <li><i class="fas fa-envelope"></i> <strong>Email:</strong> info@jainfoods.in</li>
-          <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Meerut, UP</li>
+
+          <li>
+            <i class="fas fa-globe"></i>
+            <strong>Website:</strong>
+            <a href="http://www.jainfoods.in" target="_blank" class="website-link">www.jainfoods.in</a>
+          </li>
+          
+          <li>
+            <i class="fas fa-envelope"></i>
+            <strong>Email:</strong>
+            <a href="mailto:info@jainfoods.in" class="email-link">info@jainfoods.in</a>
+          </li>
+          
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <strong>Location:</strong> 171/3 Shatabdi Nagar Industrial Area, Delhi Road,Meerut, UP
+          </li>
         </ul>
       </div>
 
@@ -193,7 +221,7 @@
       </div>
 
       <div class="qr-container">
-        <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://www.jainfoods.in" alt="QR Code to www.jainfoods.in">
+        <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://www.jainfoods.in" alt="QR Code connecting to www.jainfoods.in">
       </div>
     </div>
   </div>

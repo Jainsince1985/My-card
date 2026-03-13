@@ -39,17 +39,22 @@
 
     /* Logo is now contained *within* the header for perfect fitting */
     .logo {
-      width: 140px;
-      height: 140px;
-      border: 6px solid #fff;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Soft shadow on the logo circle */
-      background-color: #fff; /* White background within logo circle */
-      object-fit: contain;
-      padding: 15px; /* Added internal padding to keep logo graphic centered */
-      box-sizing: border-box;
-    }
-
+  /* हम साइज़ को थोड़ा छोटा कर सकते हैं ताकि यह हेडर के अंदर फिट लगे, मान लीजिए 110px */
+  width: 110px;
+  height: auto;
+  position: absolute;
+  /* हम इसे हेडर के बीच में ही रखेंगे, बस इसे थोड़ा ऊपर खिसकाएंगे ताकि यह Puneet Jain से न टकराए */
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+  /* ✅ बाकी सब साफ़ है */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0;
+}
     .content {
       padding: 30px; /* Standard internal padding */
       text-align: center;
@@ -175,7 +180,7 @@
 
   <div class="card">
     <div class="header">
-      <img class="logo" src="JAINLOGO.jpg" alt="Jain since 1985 | JAIN FOOD PRODUCTS Logo">
+      <img class="logo" src="JAINLOGO.png" alt="Jain since 1985 | JAIN FOOD PRODUCTS Logo">
     </div>
 
     <div class="content">
